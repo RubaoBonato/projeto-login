@@ -27,7 +27,7 @@ section#login{
     position: absolute; /*colocar meio da tela*/
     top: 50%;
     left:50%;
-    transform: translate(-50%,-50%); /*colocar acima da tela*/
+
     overflow: hidden;/*tudo que for fora da borda esconde*/
     
     background-color: white;
@@ -36,6 +36,7 @@ section#login{
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /*0px não tem deslocamento, 10px de espalhamento e preto*/
 
+    transform: translate(-50%,-50%); /*colocar acima da tela*/
     transition: width .3s, height .3s;
     transition-timing-function: ease; /* suavizada na transição*/
 }
@@ -79,10 +80,10 @@ div.campo > label{
 
 div.campo > i{
     color:white;
-  /*  background-color: black; */
+   /* background-color: black; */
     font-size: 2em;
-    width: 36px;
-    padding: 8px;
+    width: 39px;
+    padding: 1px;
 }
 
 div.campo > input{
@@ -90,10 +91,15 @@ div.campo > input{
     font-size: 1em;
     width: calc(100% - 44px);  /* 100% - altura*/
     height: 100%;
-    transform: translateY(-12px);
+   
     border: 0px;
     border-radius: 8px;
-    padding: 4px;
+    padding: 10px;
+    transform: translateY(-2px); /* transforme sempre  na ultima linha*/
+}
+
+div.campo > input:focus-within{
+    background-color: white;
 }
 
 form > input[type=submit]{
